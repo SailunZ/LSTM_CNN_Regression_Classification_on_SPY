@@ -29,6 +29,8 @@ One is based on the features we constructed.![plot](./data/Screenshots/strategy1
 
 The other one utilizes our linear prediction models.![plot](./data/Screenshots/strategy2a.png "Signals")![plot](./data/Screenshots/strategy2b.png "Signals")
 
+We backtest the strategies on the train sets. For example, the following shows the results of the second strategy with a $500000 initial fund.![plot](./data/Screenshots/strategy2full.png "Strategy")![plot](./data/Screenshots/strategy2fullPL.png "P&L") The P&L during the process is around $29000, and the final shares held have an average cost of about the same as the current price. Hence the final return rate is about 5.8%, which is higher than the SPY return rate of about 3.5% during the period. 
+
 ## Files
 
 - The names of the notebooks indicate the models being used. "Update.ipynb" updates and preprocesses data on prices and technical indicators from Alpha Vantage. "linear.sav", "lstm.pt", and "wavenet.pt" are saved models/model parameters predicting high values, which are used in "Ensemble Stacking.ipynb". "linear_low.sav" is a saved linear model predicting low values, which is used together with "linear.sav" in "Strategy 2.ipynb". The folder "data" contains CSV files and image files.
